@@ -21,8 +21,7 @@ jobs:
         mvn dependency:tree \
         -DoutputFile=.debricked-maven-dependencies.tgf \
         -DoutputType=tgf
-        git config --global --add safe.directory /github/workspace
-        
+          
     - uses: debricked/actions/scan@v1
       env:
         DEBRICKED_TOKEN: ${{ secrets.DEBRICKED_TOKEN_demo_cli }}
